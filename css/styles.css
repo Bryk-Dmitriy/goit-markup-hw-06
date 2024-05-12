@@ -41,6 +41,19 @@ img {
     height: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* ===================== CONTAINER ===================== */
 
 .container {
@@ -178,7 +191,7 @@ img {
     .adress-link {
     font-size: 12px;
     line-height: 1.17;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     font-family: inherit;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -201,6 +214,202 @@ img {
 
     .adress-link {
     font-size: 16px;
+    letter-spacing: 0.02em;
     line-height: 1.5;
     }
 }
+
+/* ===================== HERO IMAGE ===================== */
+
+.hero-container {
+    text-align: center;
+}
+
+.hero-image {
+    background: #2e2f42;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 767px) and (min-resolution:192dpi){ 
+.hero-image{
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@2x.jpg);
+}
+
+}
+.main-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    max-width: 216px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+}
+
+.order-button {
+    display: block;
+    font-family: inherit;
+    background: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-button:hover,
+.order-button:focus {
+    background: #404bbf;
+}
+
+/* ===================== HERO TAB ===================== */
+
+@media screen and (min-width: 768px) {
+.hero-image {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width:768px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tab.jpg);
+    }
+.main-title{
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution:192dpi) {
+.hero-image {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tab@2x.jpg);
+    }
+}
+
+/* ===================== HERO DESKTOP ===================== */
+
+@media screen and (min-width: 1158px) {
+.hero-image {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desk.jpg);
+    }
+.main-title {
+    margin-bottom: 48px;
+    }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution:192dpi) {
+.hero-image {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desk@2x.jpg);
+    }
+}
+
+/* ===================== DESKRIPTION ===================== */
+
+.description-section{
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.descriotion-icons-container{
+    display: none;
+}
+
+.description-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.descriprion-title-list{   
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+.description-paragraph {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/* ===================== DESKRIPTION TAB ===================== */
+
+@media screen and (min-width: 768px) {
+.description-list{
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+    
+}
+.description-item{
+    flex-basis: calc((100% - 24px) / 2);
+}
+}
+
+/* ===================== DESKRIPTION DESKTOP ===================== */
+
+@media screen and (min-width: 1158px) {
+.description-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+}
+.descriotion-icons-container {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background: #f4f4fd;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.description-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+.description-item {
+    flex-basis: calc((100% - 72px) / 4);
+}
+.descriprion-title-list {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.description-paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+}
+
+/* ===================== OUR TEAM ===================== */
+
